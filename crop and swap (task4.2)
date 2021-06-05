@@ -1,0 +1,23 @@
+#####cropping some part of images and swapping it( task 4.2)####
+import cv2
+# reading image 1
+image1=cv2.imread("img2.jpg")   
+#reading image 2
+image2=cv2.imread("new1.jpg")
+# to open both photos 
+cv2.imshow("im_tom",image1)
+cv2.imshow("im_jerry",image2)
+cv2.waitKey()
+cv2.destroyAllWindows()
+
+
+#Crop nad swap part of image 1 to image 2
+#cropping img 1
+crop_img= image1[500:920,300:1000]
+#swapping cropped part of img1 to img2
+image2[500:920,300:1000]=crop_img
+cv2.imshow("crop",image2)
+cv2.waitKey()
+cv2.destroyAllWindows()    
+
+
