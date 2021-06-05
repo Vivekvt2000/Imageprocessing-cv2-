@@ -1,0 +1,13 @@
+import cv2
+import numpy as np
+photo = np.zeros((400,400,3))
+#indian flag #BGR
+#orange
+photo[150:175,100:300]=[0,170,204]
+#white
+photo[170:195,100:300] = [255,255,255]
+#green
+photo[190:225,100:300] = [0,200,0]
+cv2.imshow("photo",photo)
+cv2.waitKey()
+cv2.destroyAllWindows()
